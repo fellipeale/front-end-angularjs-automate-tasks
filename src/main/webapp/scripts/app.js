@@ -1,3 +1,3 @@
 angular
     .module('frontend', [])
-    .constant('API_ENDPOINT', 'http://localhost:8080');
+    .constant('API_ENDPOINT', 'http://localhost:3000');
