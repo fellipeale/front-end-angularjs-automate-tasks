@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/PeopleController.js"></script>
+        <script src="scripts/services/peopleService.js"></script>
     </head>
     <body>
-        Hello World
+        <div ng-app="frontend">
+            <div ng-controller="PeopleController">
+                <ul>
+                    <li ng-repeat="person in people">
+                        <p>{{person.name}}</p>
+                        <p>{{person.disclosableInfo}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </body>
 </html>

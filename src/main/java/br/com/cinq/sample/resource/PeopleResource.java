@@ -3,34 +3,28 @@ package br.com.cinq.sample.resource;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Random;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import br.com.cinq.sample.bean.Person;
 
 /**
  * Service
  */
-@Path("/people")
+@RestController
+@RequestMapping("/people")
 public class PeopleResource {
 	Logger logger = LoggerFactory.getLogger(PeopleResource.class);
 
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response listPeople() {
+	@RequestMapping(method = RequestMethod.GET)
+	public List<Person> listPeople() {
 		logger.debug("Received GET requisition");
         List<Person> people = new ArrayList<Person>();
-		return Response.ok().entity(generateFakeList()).build();
+		return generateFakeList();
 	}
     
     private List<Person> generateFakeList() {

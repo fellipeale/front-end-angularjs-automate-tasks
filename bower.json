@@ -1,0 +1,25 @@
+{
+  "name": "front-end-angularjs-automate-tasks",
+  "description": "Proposed exercise for candidates evaluation",
+  "main": "app.js",
+  "authors": [
+    "CINQ Technologies"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angularjs"
+  ],
+  "homepage": "https://github.com/cinqtechnologies/front-end-angularjs-automate-tasks",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/main/webapp/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7"
+  }
+}
