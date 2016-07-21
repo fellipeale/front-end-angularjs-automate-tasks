@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "bower install",
+    "prestart": "grunt uglify:min",
     "start": "node ./src/main/server.js"
   },
   "repository": {
@@ -22,7 +23,9 @@
   "homepage": "https://github.com/cinqtechnologies/front-end-angularjs-automate-tasks",
   "devDependencies": {
     "bower": "^1.7.9",
-    "grunt": "^1.0.1"
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-uglify": "^2.0.0"
   },
   "dependencies": {
     "express": "^4.14.0"

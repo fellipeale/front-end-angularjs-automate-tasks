@@ -1,13 +1,13 @@
 angular
-    .module('frontend')
-    .factory('peopleService', peopleService);
+  .module('frontend')
+  .factory('peopleService', ['$http', 'API_ENDPOINT', peopleService]);
 
 function peopleService($http, API_ENDPOINT) {
-    let service = {};
+  var service = {};
 
-    service.listPeople = () => {
-        return $http.get(API_ENDPOINT + '/people');
-    };
+  service.listPeople = function () {
+    return $http.get(API_ENDPOINT + '/people');
+  };
 
-    return service;
+  return service;
 }
