@@ -13,7 +13,7 @@ function generateFakeList() {
         'onsequat.';
     let peopleList = [];
 
-    for(let i = 0; i < 10; i++) {
+    for(let i = 0; i < 12; i++) {
         let person = {
             id: i,
             name: names[getRandom(names.length)] + ' ' + surnames[getRandom(surnames.length)],

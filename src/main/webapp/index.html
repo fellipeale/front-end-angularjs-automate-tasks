@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Cardo' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="styles/style.css">
+
         <script src="bower_components/angular/angular.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/PeopleController.js"></script>
@@ -8,11 +12,11 @@
     </head>
     <body>
         <div ng-app="frontend">
-            <div ng-controller="PeopleController">
+            <div class="main" ng-controller="PeopleController">
                 <ul>
                     <li ng-repeat="person in people">
-                        <p>{{person.name}}</p>
-                        <p>{{person.disclosableInfo}}</p>
+                        <h3 class="head">{{person.name}}</h3>
+                        <p class="body">{{person.disclosableInfo}}</p>
                     </li>
                 </ul>
             </div>
